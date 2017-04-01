@@ -7,7 +7,7 @@
 	</div>
 </template>
 <script>
-    // import search from "../common/search"
+    
     import MessageItem from "../wechat/MessageItem.vue"
     export default {
         components: { 
@@ -21,6 +21,6 @@
         }
     }
 </script>
-<style>
-    @import "../../assets/css/wechat.css";
+<style lang="sass">
+    @import "../../assets/sass/wechat.scss";
 </style>

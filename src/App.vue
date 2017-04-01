@@ -1,6 +1,7 @@
 <template>
     <div id="app">
-        <v-welcome></v-welcome>
+        <wx-welcome></wx-welcome>
+        <wx-search></wx-search>
         <section class="app-content">
             <keep-alive>
                 <router-view ></router-view>
@@ -10,10 +11,11 @@
 </template>
 
 <script>
-import vWelcome from './components/common/welcome.vue'
+import wxWelcome from './components/common/wxWelcome'
+import wxSearch from "./components/common/wxSearch"
 export default {
     name: 'app',
-    components:{ vWelcome }
+    components:{ wxWelcome , wxSearch}
 }
 </script>
 
@@ -22,7 +24,7 @@ export default {
     
     @import "assets/css/base.css";
     @import "assets/css/common.css";
-    @import "assets/css/wx-header.css";
+    /*@import "assets/css/wx-header.css";*/
     /*阿里 fonticon*/
     
     @import "assets/css/lib/iconfont.css";

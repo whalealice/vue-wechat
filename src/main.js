@@ -9,7 +9,7 @@ import FastClick from 'fastclick' //使用 fastclick 解决移动端 300ms 点�
 import axios from 'axios'
 import VueAxios from 'vue-axios'
 import filters from './filters' //将全部过滤器放在 filters/index.js 中便于管理
- // 注册全局过滤器
+//注册全局过滤器
 filters(Vue)
 Vue.use(VueAxios, axios, vuex)
 
