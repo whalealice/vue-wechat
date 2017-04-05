@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import contact from './contacts' //存放所有联系人的数据
+import mutations from './mutations' //存放所有联系人的数据
 Vue.use(Vuex)
 // 统一管理接口域名 
 let apiPublicDomain = '//vrapi.snail.com/'
@@ -78,9 +79,9 @@ const state = {
                 "type": "group",
                 "group_name": "前端学习小组",
                 "group_qrCode": "",
-                "read": true,
+                "read": false,
                 "newMsgCount": 1,
-                "quiet": true,
+                "quiet": false,
                 "msg": [{
                     "text": '冒个泡',
                     "date": 1488117964495,
@@ -151,5 +152,6 @@ const state = {
     }
 }
 export default new Vuex.Store({
-    state
+    state,
+    mutations
 })
