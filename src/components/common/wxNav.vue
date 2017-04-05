@@ -42,6 +42,7 @@ export default {
 				this.$store.commit('addNewMsg')
 			}
 		}
+		// console.log(this.$store.state.currentPageName)
 		// _data.forEach()
 	}
 

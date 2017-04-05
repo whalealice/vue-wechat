@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import contact from './contacts' //存放所有联系人的数据
-import mutations from './mutations' //存放所有联系人的数据
+import mutations from './mutations' 
 Vue.use(Vuex)
 // 统一管理接口域名 
 let apiPublicDomain = '//vrapi.snail.com/'

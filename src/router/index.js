@@ -4,12 +4,29 @@ import Router from 'vue-router';
 Vue.use(Router);
 
 //创建 router 实例，然后传 `routes` 配置
+const routes = [{
+        path: '/',
+        name: "微信",
+        component: resolve => require(["../components/wechat/WeChat.vue"], resolve)
+    }, {
+        path: '/wechat/dialogue',
+        name: "",
+        components: {
+            "default": resolve => require(["../components/wechat/WeChat.vue"], resolve),
+            "subPage": resolve => require(["../components/wechat/WeDialogue.vue"], resolve)
+        }
+    }
+
+]
 export default new Router({
-	routes:[
-	  	{ 
-	  		path: '/',
-	  		name:"微信",
-	  		component: resolve => require(["../components/wechat/WeChat.vue"], resolve)
-	  	}
-	]
+    base: "/",
+    routes,
+    // scrollBehavior(to, from, savedPosition) {
+    //     if (savedPosition) {
+    //         return savedPosition
+    //     } else {
+    //         return { x: 0, y: 0 }
+    //     }
+    // }
+
 })

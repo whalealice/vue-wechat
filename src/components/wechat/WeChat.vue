@@ -7,19 +7,18 @@
 	</div>
 </template>
 <script>
-    
-    import MessageItem from "../wechat/MessageItem.vue"
-    export default {
-        components: { 
-        	MessageItem
-        },
-        // mixins: [window.mixin],
-        data() {
-            return {
-                "pageName": "微信"
-            }
+import MessageItem from "../wechat/MessageItem.vue"
+export default {
+    components: { 
+    	MessageItem
+    },
+    // mixins: [window.mixin],
+    data() {
+        return {
+            "pageName": "微信"
         }
     }
+}
 </script>
 <style lang="sass">
     @import "../../assets/sass/wechat.scss";
