@@ -3,7 +3,7 @@
 import Vue from 'vue'
 import App from './App' //入口文件
 import router from './router' //路由
-import vuex from 'vue'
+import vuex from 'vuex'
 import store from './vuex/store'
 import FastClick from 'fastclick' //使用 fastclick 解决移动端 300ms 点击延迟
 import axios from 'axios'
@@ -17,6 +17,7 @@ Vue.config.productionTip = false //将此值设置为 false ,会关闭 Vue 启�
 
 FastClick.attach(document.body)
 
+import 'babel-polyfill'
 /* eslint-disable no-new */
 new Vue({
 	el: '#app',

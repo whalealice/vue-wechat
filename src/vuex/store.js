@@ -20,75 +20,75 @@ const state = {
     },
     msgList: {
         stickMsg: [], //置顶消息列表 后期需要
-        baseMsg: [{ //普通消息列表
+        baseMsg: [
+            { //普通消息列表
                 "mid": 1, //消息的id 唯一标识，重要
                 "type": "friend",
                 "group_name": "",
                 "group_qrCode": "",
-                "read": true, //true；已读 false：未读
-                "newMsgCount": 1,
+                "read": false, //true；已读 false：未读
+                "unreadnum":3, //未读条数
+                "newMsgCount": 1, 
                 "quiet": false, // true：消息免打扰 false：提示此好友/群的新消息
-                "msg": [{ //对话框的聊天记录 新消息 push 进
-                    "text": "点击这些白色框消息，唤醒消息操作菜单，点击这些白色框消息，唤醒消息操作菜单",
+                "msg": [{
+                    "text": '团子乖，娘亲要出去一下！',
                     "date": 1488117964495,
-                    "name": "阿荡",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                    "name": "白浅",
+                    "self":true,
+                    "headerUrl": "../../static/images/baiqian.jpg"
+                },{ //对话框的聊天记录 新消息 push 进
+                    "text": "娘亲",
+                    "date": 1488117964495,
+                    "name": "阿里",
+                    "self":false,
+                    "headerUrl": "../../static/images/ali.jpg" 
                 }, {
-                    "text": '点击空白处，操作菜单消失',
+                    "text": '你不要阿里了吗？',
                     "date": 1488117964495,
-                    "name": "阿荡",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                    "name": "阿里",
+                    "self":false,
+                    "headerUrl": "../../static/images/ali.jpg"
                 }, {
-                    "text": '来呀 快活啊',
+                    "text": '娘亲?',
                     "date": 1488117964495,
-                    "name": "阿荡",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                    "name": "阿里",
+                    "self":false,
+                    "headerUrl": "../../static/images/ali.jpg"
                 }],
-                "user": [contact.getUserInfo('wxid_baiqian')] // 此消息的用户数组 长度为1则为私聊 长度大于1则为群聊
+                "background":'../../static/images/bg1.jpg',
+                "user": [contact.getUserInfo('wxid_ali')] // 此消息的用户数组 长度为1则为私聊 长度大于1则为群聊
             },
             {
                 "mid": 2,
                 "type": "group",
-                "group_name": "602姐妹花",
+                "group_name": "三个团子",
                 "group_qrCode": "",
-                "read": false,
+                "read": true,
+                "unreadnum":0,
                 "newMsgCount": 1,
                 "quiet": true,
                 "msg": [{
-                        "text": "点击消息，唤醒消息操作菜单",
+                        "text": "团子，你父君呢？",
                         "date": 1488117964495,
-                        "name": "柏帆",
-                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg"
+                        "name": "白浅",
+                        "self":true,
+                        "headerUrl": "../../static/images/baiqian.jpg"
                     }, {
-                        "text": '点击空白处，操作菜单消失',
+                        "text": '在天宫！',
                         "date": 1488117964495,
-                        "name": "慧慧",
-                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/header01.png"
+                        "name": "阿离",
+                        "self":false,
+                        "headerUrl": "../../static/images/ali.jpg"
                     },
                     {
-                        "text": '我试一试',
+                        "text": '浅浅，我来了！',
                         "date": 1488117964495,
-                        "name": "孟娇",
-                        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg"
+                        "name": "夜华",
+                        "self":false,
+                        "headerUrl": "../../static/images/yehua.jpg"
                     }
                 ],
-                "user": [contact.getUserInfo('wxid_baiqian'), contact.getUserInfo('wxid_yehua')]
-            },
-            {
-                "mid": 3,
-                "type": "group",
-                "group_name": "前端学习小组",
-                "group_qrCode": "",
-                "read": false,
-                "newMsgCount": 1,
-                "quiet": false,
-                "msg": [{
-                    "text": '冒个泡',
-                    "date": 1488117964495,
-                    "name": "诸葛亮",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/zhugeliang.jpg"
-                }],
-                "user": [contact.getUserInfo('wxid_baiqian'), contact.getUserInfo('wxid_baifengjiu'), contact.getUserInfo('wxid_zheyan')]
+                "user": [contact.getUserInfo('wxid_ali'), contact.getUserInfo('wxid_yehua'),contact.getUserInfo('wxid_baiqian')]
             },
             {
                 "mid": 4,
@@ -96,23 +96,24 @@ const state = {
                 "group_name": "",
                 "group_qrCode": "",
                 "read": false,
+                "unreadnum":3,
                 "newMsgCount": 4,
                 "quiet": false,
                 "msg": [{
-                    "text": "点击消息，唤醒消息操作菜单",
+                    "text": "浅浅，过来",
                     "date": 1488117964495,
-                    "name": "孙权",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
+                    "name": "夜华",
+                    "headerUrl": "../../static/images/yehua.jpg"
                 }, {
-                    "text": '点击空白处，操作菜单消失',
+                    "text": '浅浅，过来',
                     "date": 1488117964495,
-                    "name": "孙权",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
+                    "name": "夜华",
+                    "headerUrl": "../../static/images/yehua.jpg"
                 }, {
-                    "text": '容我三思',
+                    "text": '浅浅，过来',
                     "date": 1488117964495,
-                    "name": "孙权",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunquan.jpg"
+                    "name": "夜华",
+                    "headerUrl": "../../static/images/yehua.jpg"
                 }],
                 "user": [contact.getUserInfo('wxid_yehua')]
             },
@@ -122,13 +123,14 @@ const state = {
                 "group_name": "",
                 "group_qrCode": "",
                 "read": false,
+                "unreadnum":1,
                 "newMsgCount": 4,
-                "quiet": false,
+                "quiet": true,
                 "msg": [{
-                    "text": '夫君,身体要紧~ ',
+                    "text": '白浅上神！',
                     "date": 1488117964495,
-                    "name": "孙尚香",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg"
+                    "name": "东华帝君",
+                    "headerUrl": "../../static/images/dijun.jpg"
                 }],
                 "user": [contact.getUserInfo('wxid_dijun')]
             },
@@ -137,16 +139,34 @@ const state = {
                 "type": "friend",
                 "group_name": "",
                 "group_qrCode": "",
-                "read": false,
+                "read": true,
+                "unreadnum":0,
                 "newMsgCount": 4,
-                "quiet": true,
+                "quiet": false,
                 "msg": [{
-                    "text": '三姓家奴！ ',
+                    "text": '姑姑，我去报恩啦！ ',
                     "date": 1488117964495,
-                    "name": "关羽",
-                    "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/guangyu.jpg"
+                    "name": "白凤九",
+                    "headerUrl": "../../static/images/baifengjiu.jpg"
                 }],
                 "user": [contact.getUserInfo('wxid_baifengjiu')]
+            },
+            {
+                "mid": 7,
+                "type": "friend",
+                "group_name": "",
+                "group_qrCode": "",
+                "read": false,
+                "unreadnum":1,
+                "newMsgCount": 4,
+                "quiet": false,
+                "msg": [{
+                    "text": '浅浅，你在哪？ ',
+                    "date": 1488117964495,
+                    "name": "白真",
+                    "headerUrl": "../../static/images/baizhen.jpg"
+                }],
+                "user": [contact.getUserInfo('wxid_baizhen')]
             }
         ]
     }

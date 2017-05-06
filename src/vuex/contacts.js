@@ -19,7 +19,30 @@ const contacts = [{
         "nickname": "白浅",
         "sex": 0,
         "remark": "",
-        "signature": "青丘女帝，天族天妃",
+        "signature": "青丘帝姬",
+        "telphone": 18896586152,
+        "album": [{
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg",
+            date: 182625262
+        }, {
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
+            date: 182625262
+        }],
+        "area": ["青丘", "狐狸洞"],
+        "from": "通过扫一扫",
+        "tag": "女帝",
+        "desc": {
+            "title": "",
+            "picUrl": ""
+        }
+    },{
+        "wxid": "wxid_ali",
+        "initial": 'b',
+        "headerUrl": "../../static/images/ali.jpg",
+        "nickname": "阿离",
+        "sex": 0,
+        "remark": "",
+        "signature": "天族小殿下",
         "telphone": 18896586152,
         "album": [{
             imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian01.jpeg",
@@ -38,7 +61,7 @@ const contacts = [{
     }, { //昵称备注都有的朋友
         "wxid": "wxid_yehua",
         "initial": 'y',
-        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/yehua.jpg",
+        "headerUrl": "../../static/images/yehua.jpg",
         "nickname": "夜华",
         "sex": 1,
         "remark": "夜华",
@@ -86,7 +109,7 @@ const contacts = [{
     {
         "wxid": "wxid_lijing",
         "initial": 'l',
-        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/guangyu.jpg",
+        "headerUrl": "../../static/images/lijing.jpg",
         "nickname": "离境",
         "sex": 1,
         "remark": "离境",
@@ -134,11 +157,32 @@ const contacts = [{
     {
         "wxid": "wxid_zheyan",
         "initial": 'z',
-        "headerUrl": "https://sinacloud.net/vue-wechat/images/headers/sunshangxiang.jpg",
+        "headerUrl": "../../static/images/zheyan.jpg",
         "nickname": "折颜",
         "sex": 0,
         "remark": "折颜",
         "signature": "真真，我们走！",
+        "telphone": 18896586152,
+        "album": [{
+            imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",
+            date: 182625262
+        }],
+        "area": ["青丘", "十里桃林"],
+        "from": "通过手机号码添加",
+        "tag": "上神",
+        "desc": {
+            "title": "",
+            "picUrl": ""
+        }
+    },
+    {
+        "wxid": "wxid_baizhen",
+        "initial": 'b',
+        "headerUrl": "../../static/images/baizhen.jpg",
+        "nickname": "白真",
+        "sex": 0,
+        "remark": "白真",
+        "signature": "浅浅",
         "telphone": 18896586152,
         "album": [{
             imgSrc: "https://sinacloud.net/vue-wechat/images/album/baiqian/baiqian02.jpeg",

@@ -8,14 +8,15 @@
 .dialogue-section {
     // margin-top: 45px;
     height: 100%;
-    background: url("https://sinacloud.net/vue-wechat/images/bg/alarm.jpg") center center;
     padding: 2%;
-    .row {
+
+    .isLeft {
         width: 80%;
-        margin-top: 30px;
-        margin-bottom: -10px;
+        margin-top: 20px;
+        float: left;
         .header {
             width: 35px;
+            height:35px;
             float: left;
             display: block;
         }
@@ -42,6 +43,28 @@
                 border: 6px solid transparent;
                 border-right-color: #fff;
             }
+        }
+    }
+
+    .isRight{
+        float: right;
+        .header{
+            float:right;
+        }
+        .text{
+            float: right;
+            margin-right:14px;
+        }
+        .text:before {
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: -12px;
+            left: inherit;
+            top: 11px;
+            content: "";
+            border: 6px solid transparent;
+            border-left-color: #fff;
         }
     }
     .msg-more {
@@ -397,3 +420,4 @@
     background-position: center center;
     background-size: contain;
 }
+
