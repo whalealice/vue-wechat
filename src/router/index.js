@@ -30,6 +30,11 @@ const routes = [{
             "subPage": resolve => require(["../components/wechat/DialogueDetail.vue"], resolve)
         }
     },
+    {
+        path: '/contact',
+        name: "通讯录",
+        component: resolve => require(["../components/contact/contact.vue"], resolve)
+    },
 
 ]
 export default new Router({

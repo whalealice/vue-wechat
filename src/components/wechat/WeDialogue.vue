@@ -32,11 +32,6 @@
                 pageName: this.$route.query.name
             }
         },
-        beforeRouteEnter(to, from, next) {
-            next(vm => {
-                vm.$store.commit("setPageName", vm.$route.query.name)
-            })
-        },
         computed: {
             msgInfo() {
                 for (var i in this.$store.state.msgList.baseMsg) {
