@@ -15,7 +15,21 @@ const routes = [{
             "default": resolve => require(["../components/wechat/WeChat.vue"], resolve),
             "subPage": resolve => require(["../components/wechat/WeDialogue.vue"], resolve)
         }
-    }
+    },
+    {
+        path: '/wechat/dialogue/dialogue-info',
+        name: "",
+        components: {
+            "subPage": resolve => require(["../components/wechat/DialogueInfo.vue"], resolve)
+        }
+    },
+    {
+        path: '/wechat/dialogue/dialogue-detail',
+        name: "",
+        components: {
+            "subPage": resolve => require(["../components/wechat/DialogueDetail.vue"], resolve)
+        }
+    },
 
 ]
 export default new Router({

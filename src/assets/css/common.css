@@ -226,3 +226,12 @@ a:hover {
     background-size: contain;
     background-position: 50%;
 }
+
+#wx-header .center .icon-return-arrow {
+    left: 10px;
+    position: absolute;
+    font-size: 16px;
+}
+#wx-header .center span{
+    font-size: 16px;
+}
